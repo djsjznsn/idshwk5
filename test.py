@@ -86,8 +86,8 @@ def writeData(filename,resultList):
 def main():
   traindomainlist=[]
   testdomainlist=[]
-  initData("C:/Users/hp/Desktop/train.txt",traindomainlist)
-  initData("C:/Users/hp/Desktop/test.txt",testdomainlist)
+  initData("train.txt",traindomainlist)
+  initData("test.txt",testdomainlist)
   featureMatrix=[]
   labelList=[]
   testMatrix=[]
@@ -99,7 +99,7 @@ def main():
   clf=RandomForestClassifier(random_state=0)
   clf.fit(featureMatrix,labelList)
   resultList=clf.predict(testMatrix)
-  writeData("C:/Users/hp/Desktop/result.txt",resultList)
+  writeData("result.txt",resultList)
   
 main()
 
